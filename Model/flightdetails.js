@@ -5,8 +5,10 @@ const UserSchema = new mongoose.Schema({
     Travel_btw_cities:{type:String,required:true},
     flight_Timings:{type:String,required:true},
     plane_Category:{type:String,required:true}
+}, {
+    versionKey:false
 })
 
-const UserModel = mongoose.model('ticketbook',UserSchema)
+const flightModel = mongoose.model('flightdetails',UserSchema)
 
-module.export = UserModel
+module.exports = flightModel

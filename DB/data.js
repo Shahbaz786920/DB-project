@@ -1,8 +1,11 @@
-const ticketbook = {
-    flightNo:78565566,
-    Travel_btw_cities:"Raipur to Goa",
-    flight_Timings:"9:00 to 11:00",
-    plane_Category:"passenger"
-}
+const UserData = {
+        Name:"Arbaaz",
+        Age:24,
+        Address:"Bhilai",
+        flightNo:7856532600,
+        Travel_btw_cities:"Raipur to Chennai",
+        flight_Timings:"10:00 to 12:00",
+        plane_Category:"cargo"
+    }
 
-module.exports = ticketbook;
+    module.exports = UserData

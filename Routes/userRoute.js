@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const UserModel = require('../Model/ticketModel')
-const ticketbook = require('../DB/data')
+const flightModel = require('../Model/flightdetails')
+const bookModel = require('../Model/ticketbook')
+const UserData = require('../DB/data')
+
 
 router.post('/get',(req,res)=>{
-    UserModel.create(ticketbook,(err,data)=>{
+    flightModel.create(UserData,(err,data)=>{
         if(!err){
             res.status(200)
             res.json({
@@ -17,6 +19,20 @@ router.post('/get',(req,res)=>{
             res.json("something is wrong")
         }
     })  
+})
+router.get('/book',(req,res)=>{
+    bookModel.create(UserData,(err,data)=>{
+        if(!err){
+            res.status(200)
+            res.json({
+                data:data
+            })
+        }
+        else{
+            res.status(404)
+            res.json("error occured")
+        }
+    })
 })
 
 module.exports = router
